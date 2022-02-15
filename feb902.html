@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <body>
+       
+        <script>
+            const weeks= ['mon', 'wed', 'thursday', 'friday'];
+            
+weeks.splice(1, 0, 'tue');
+
+document.write(weeks);
+
+document.writeln("<br/>"); 
+
+months.splice(4, 1, 'sat');
+
+document.write(weeks);
+
+
+document.writeln("<br/>"); 
+
+var a = ['one', 'two', 'three', 'four', 'five']
+document.write(a);
+document.writeln("<br/>"); 
+var b = a.splice(2, 2);
+document.write(b);
+document.writeln("<br/>"); 
+document.write(a);
+document.writeln("<br/>"); 
+a.splice(2, 0, 'three','four');
+document.write(a);
+document.writeln("<br/>"); 
+            </script>
+            
+  
+            <script>
+                const array1 = ['hello', 'welcome', 'to'];
+const array2 = ['dlithe', 'bootcamp', '2022'];
+const array3 = array1.concat(array2);
+
+document.write(array3);
+            </script><br>
+            
+            <script>
+                const letters = ['x', 'y', 'z'];
+
+const alphaNumeric = letters.concat(10, 20, 30);
+
+document.write(alphaNumeric);
+            </script><br>
+            
+            
+            <script>
+                var a = ['p', 'q', 'r','s','t'];
+var iterator = a.entries();
+
+for (let e of iterator)
+ {
+  document.write(e+"<br>");
+}
+            </script><br>
+            
+            // reverse //<br>
+            <script>
+                var a = [100, 200, 300];
+
+document.write(a); 
+
+a.reverse();
+document.writeln("<br/>"); 
+
+document.write(a); 
+            </script><br>
+            
+
+
+          <br>  //indexof//
+            
+    <script>
+var colors = ["white", "Black", "Red", "Green","Yellow"];
+var a=colors.indexOf("Yellow") ; 
+document.write(a);
+document.writeln("<br/>"); 
+a=colors.lastIndexOf("Yellow"); 
+document.write(a);
+    </script>
+   
+    
+
+    <p id="demo"></p>
+    
+    <script>
+    var colors = ["white", "Black", "Red", "Green"];
+    document.getElementById("demo").innerHTML = colors.toString();
+    </script>
+   
+
+       
+        <script>
+            var colors = ["White", "Black", "Red", "Green"];
+var a=colors.join() ;  
+document.write(a);
+console.log(a);
+console.log(colors);
+        </script>
+        
+        
+            <script>
+                 var colorss = ["White", "Black", "violet", "Red", "Green"];
+               
+  var a = colors.slice(-3, -1);
+  document.write(a);
+  document.writeln("<br/>"); 
+  var b = colors.slice(1, 4);
+  document.write(b);
+            </script>
+
+
+<script>
+    var arr = [2, 5, 8, 1, 4]
+document.write(arr.sort());
+document.write(arr);
+</script>
+
+<script>
+var words = ['orange', 'yellow', 'voilet', 'grey', 'pink','blue'];
+
+var result = words.filter(word => word.length == 6);
+
+document.write(result);
+</script><br>
+
+
+
+
+// math //
+
+
+
+<br><p id="demo1"></p>
+
+<script>
+    
+   
+   a=10;
+document.getElementById("demo1").innerHTML = 
+"<p><b>Math.E:</b> " + Math.E + "</p>" +
+"<p><b>Math.PI:</b> " + Math.PI + "</p>" +
+"<p><b>Math.SQRT2:</b> " + Math.SQRT2 + "</p>" +
+"<p><b>Math.SQRT1_2:</b> " + Math.SQRT1_2 + "</p>" +
+"<p><b>Math.LN2:</b> " + Math.LN2 + "</p>" +
+"<p><b>Math.LN10:</b> " + Math.LN10 + "</p>" +
+"<p><b>Math.LOG2E:</b> " + Math.LOG2E + "</p>" +
+"<p><b>Math.Log10E:</b> " + Math.LOG10E + "</p>";
+</script>
+<script>
+document.write(Math.round(7.7)+"<br>");
+document.write(Math.round(-7.7)+"<br>");
+document.write(Math.ceil(8.7)+"<br>");
+document.write(Math.ceil(9.2)+"<br>");
+document.write(Math.floor(9.7)+"<br>");
+document.write(Math.trunc(9.7)+"<br>");
+document.write(Math.sign(0)+"<br>");
+document.write(Math.sign(-9.7)+"<br>");
+document.write(Math.pow(6,2)+"<br>");
+document.write(Math.sqrt(91)+"<br>");
+document.write(Math.abs(-5)+"<br>");
+document.write(Math.sin(5)+"<br>");
+document.write(Math.cos(6)+"<br>");
+document.write(Math.tan(9)+"<br>");
+document.write(Math.min(0, 150, 30, 20, -8, -200)+"<br>");
+document.write(Math.max(0, 150, 30, 20, -8, -200)+"<br>");
+document.write(Math.random()+"<br>");   
+document.write(Math.log(1)+"<br>");  
+
+document.write(Math.floor(Math.random() * 100)+"<br>");
+ 
+    </script>
+
+    
+       
+    <script>  
+        document.write(sum(100,11)+"<br>");  
+        function sum(a,b)  
+        {  
+        return a+b;  
+        }  
+
+        x=50;  
+document.write(x);  
+var x;  
+        </script>  <br>
+
+
+
+//Date function //<br>
+
+
+<script>
+    var d = new Date();
+    document.write(d);
+    </script>
+    
+    <script>
+      var d = new Date(2018,0,7,17,14,20,50);
+     document.write(d);
+     </script>
+     <script>
+         
+    var d = new Date("7 January 2018");
+     document.write(d);
+        </script>
+            
+            <script>
+      
+                var d = new Date();
+                document.write(d.toDateString() + "<br>"); 
+                document.write(d.toLocaleDateString() + "<br>"); 
+                document.write(d.toISOString() + "<br>"); 
+                document.write(d.toUTCString() + "<br>"); 
+                document.write(d.toString()); 
+                </script>
+                
+                <script>
+                    var d = new Date();
+                     document.write(d.getDate() + "<br>"); 
+                    document.write(d.getDay() + "<br>"); 
+                    document.write(d.getMonth() + "<br>"); 
+                    document.write(d.getFullYear()); 
+                    </script>
+            
+                    <script>
+
+                        var d = new Date();
+                     
+                        document.write(d.getHours() + "<br>");
+                        document.write(d.getMinutes() + "<br>"); 
+                        document.write(d.getSeconds() + "<br>"); 
+                        document.write(d.getMilliseconds() + "<br>"); 
+                       
+                        </script>
+                        
+
+<p id="demo"></p>
+
+<script>
+var d = new Date();
+d.setFullYear(2022, 1, 9);
+document.getElementById("demo").innerHTML = d;
+</script>
+
+<script>
+    var d = new Date(2022, 1, 9); 
+    d.setHours(16);
+    d.setMinutes(00);
+    d.setSeconds(20);
+    d.setMilliseconds(500);
+    document.write(d);
+    </script><br>
+
+
+
+
+// string //<br>
+
+<script>  
+    var str="javascript";  
+    document.write(str.charAt(5));  
+    </script> <br>
+    
+    <script>  
+        var s1="for ";  
+        var s2="cat";  
+        var s3=s1.concat(s2);  
+        document.write(s3);  
+        </script>
+
+        <script>  
+            var s1="javascript indexof example";  
+            var n=s1.indexOf("indexof");  
+            document.write(n);  
+            </script>  
+            <br>
+            <script>  
+                var s1="indexof javascript indexof";  
+                var n=s1.lastIndexOf("indexof");  
+                document.write(n);  
+                </script>  
+                <br>
+                <script>  
+                    var s1="WEDNESDAY";  
+                    var s2=s1.toLowerCase();  
+                    document.write(s2);  
+                    </script>  
+                    <br>
+                <script>  
+                        var s1="good evening";  
+                        var s2=s1.toUpperCase();  
+                        document.write(s2);  
+                </script>  
+                        <br>
+                 <script>  
+                            var s1="mango";  
+                            var s2=s1.slice(2,5);  
+                            document.write(s2);  
+                 </script>  
+                            <br>
+                 <script>  
+                
+
+                            var s1="     javascript trim    ";  
+                            var s2=s1.trim();  
+                            document.write(s2);  
+                 </script>  
+                                
+                <script>  
+                            var str="welcome To Dlithe Bootcamp .";  
+                            document.write(str.split(" "));
+                 </script>  <br> 
+
+
+// error //
+
+
+
+
+
+
+<p>number between 10 and 20:</p>
+
+<input id="demo" type="text">
+<button type="button" onclick="myFunction()">Test Input</button>
+
+<p id="p01"></p>
+
+<script>
+function myFunction() {
+  const message = document.getElementById("p01");
+  message.innerHTML = "";
+  let x = document.getElementById("demo").value;
+  try { 
+    if(x == "")  throw "is empty";
+    if(isNaN(x)) throw "is not a number";
+    x = Number(x);
+    if(x > 20)   throw "is too high";
+    if(x < 10)  throw "is too low";
+  }
+  catch(err) {
+    message.innerHTML = "Input " + err;
+  }
+  finally {
+    document.getElementById("demo").value = "";
+  }
+}
+</script>
+
+
+
+        </body>
+
+</html>

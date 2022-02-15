@@ -1,0 +1,236 @@
+<html>
+    <head>
+
+        <script type="text/javascript">
+            function registration()
+         {
+     
+             var name= document.getElementById("t1").value;
+             var email= document.getElementById("t2").value;
+             var uname= document.getElementById("t3").value;
+             var pwd= document.getElementById("t4").value;           
+             var cpwd= document.getElementById("t5").value;
+             
+           
+             var pwd_expression = /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-])/;
+             var letters = /^[A-Za-z]+$/;
+             var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+     
+             if(name=='')
+             {
+                 alert('Please enter your name');
+             }
+             else if(!letters.test(name))
+             {
+                 alert('Name field required only alphabet characters');
+             }
+             else if(email=='')
+             {
+                 alert('Please enter your user email id');
+             }
+             else if (!filter.test(email))
+             {
+                 alert('Invalid email');
+             }
+             else if(uname=='')
+             {
+                 alert('Please enter the user name.');
+             }
+             else if(!letters.test(uname))
+             {
+                 alert('User name field required only alphabet characters');
+             }
+             else if(pwd=='')
+             {
+                 alert('Please enter Password');
+             }
+             else if(cpwd=='')
+             {
+                 alert('Enter Confirm Password');
+             }
+             else if(!pwd_expression.test(pwd))
+             {
+                 alert ('Upper case, Lower case, Special character and Numeric letter are required in Password filed');
+             }
+             else if(pwd != cpwd)
+             {
+                 alert ('Password not Matched');
+             }
+             else if(document.getElementById("t5").value.length < 6)
+             {
+                 alert ('Password minimum length is 6');
+             }
+             else if(document.getElementById("t5").value.length > 12)
+             {
+                 alert ('Password max length is 12');
+             }
+             else
+             {                                           
+                    alert('Thank You for Registration & You are Redirecting to Website');
+
+                    window.location = "https://tutorial.eyehunts.com//"; 
+             }
+         }
+       </script>
+     
+
+
+
+
+
+
+    </head>
+    <body align="center" bgcolor="pink" ></body>
+    <body>
+        // ENCAPSULATION //<br>
+            
+      <br>  <script>
+            
+            
+             
+class Student  
+  {  
+    constructor()  
+    {  
+       var name;  
+       var marks;  
+    }  
+        getName()  
+        {  
+          return this.name;  
+        }  
+      setName(name)  
+      {  
+        this.name=name;  
+      }  
+        
+      getMarks()  
+      {  
+        return this.marks;  
+      }  
+    setMarks(marks)  
+    {  
+      this.marks=marks;  
+    }  
+  
+    }  
+    var stud=new Student();  
+     stud.setName("xyz");  
+     stud.setMarks(90);  
+    console.log(stud.getName()+" "+stud.getMarks());  
+</script>  <br>
+
+
+    <br>// Abstract class //<br>
+    
+    <br><script>
+        
+         function color()
+        {
+            this.colorName="colorName";
+            throw new Error("You cannot create an instance of Abstract Class");
+        }
+    
+    
+        color.prototype.display=function()
+        {
+            return "Color is: "+this.colorName;
+        }
+    
+        function Pink(colorName)
+        {
+            this.colorName=colorName;
+        }
+        
+        Pink.prototype=Object.create(color.prototype);
+    
+        var Pink=new Pink("Blue");
+        console.log(Pink.display());
+        
+    </script>  <br>  
+
+
+
+<br>// js abstract //
+
+
+<script>
+    
+    function Employee()
+
+{
+    this.empName= "empName";
+    if(this.constructor === Employee){
+    throw new Error("FYI: Instance of Abstract class cannot be instantiated");
+    }
+    } ;
+ 
+    Employee.prototype.display=function()
+    {  return this.empName;  }
+    var employee = new Employee();
+    </script>
+
+
+
+
+
+
+<script>
+   
+    function Employee()
+    {
+    this.empName="empName";
+    if(this.constructor === Employee){
+    throw new Error("You cannot create an instance of     Abstract Class");
+    }
+};
+
+Employee.prototype.display=function()
+{
+return "Employee name is: "+this.empName;
+}
+
+function Manager(fullName)
+{
+this.empName=fullName;
+}
+
+Manager.prototype=Object.create(Employee.prototype);
+var mang=new Manager("xyz");
+console.log(mang.display());
+</script><br>
+
+
+<br>// validation //
+
+
+<br><script>  
+    function validateemail()  
+    {  
+    var x=document.myform.email.value;  
+    
+      {  
+      alert("Please enter a valid e-mail address");  
+      return false;  
+      }  
+    }  
+    </script>  <br>
+    <body>  
+    <form name="myform"  method="post" action="" onsubmit="return validateemail();">  
+    Email: <input type="text" name="email"><br/>  
+      
+    <br><input type="submit" value="register">  
+    </form>  
+
+
+
+
+
+
+
+
+
+    
+
+    </body>
+</html>

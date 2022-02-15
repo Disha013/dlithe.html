@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <body>
+
+function A(a){
+    this.a=a;
+    A.prototype.getA=function(){
+        document.write(a+"<br>");
+    }
+}
+function B(a,b){
+    A.call(this,a);
+    this.b=b;
+    B.prototype.getB=function(){
+        obj.getA();
+        document.write(b + "<br>");
+    }
+}
+function C(a,b,c){
+    B.call(this,a,b);
+    this.c=c;
+    C.prototype.getC=function(){
+        obj.getB
+document.write(c + "<br>");
+    }
+}  
+B.prototype = object.create(A.prototype);
+B.prototype.
+C.prototype.constructor=C;
+var obj=new C(1,2,3);
+obj.getC(); 
+
+</html>
+
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+B.prototype = Object.create(A.prototype);
+B.prototype.constructor = B;
+C.prototype = Object.create(B.prototype);
+C.prototype.constructor = C;

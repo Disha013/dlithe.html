@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,63 +9,90 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
-  <script>
-        
-        function validate()
-        {  
-        var email=document.getElementById("Name").value;
-        var pwd=document.getElementById("Phone Number").value;
-          
-        if (Name==null || Name=="")
-        
-        {  
-          alert("Your name can't be blank");  
-          return false;  
-        }
-        
-        else if(pwd.length<6)
-        
-        {  
-          alert("phone num must have 10 digit.");  
-          return false;  
-          }  
-        } 
+  
 
-function Check() {
-  return validate();      
+
+
+
+<script type="text/javascript">
+  function registration()
+{
+
+   var name= document.getElementById("t1").value;
+   var phonenumber= document.getElementById("t2").value;
+   
+
+   
+   if(name=='')
+   {
+       alert('Please enter your name');
+   }
+   else if(!letters.test(name))
+   {
+       alert('Name field required only alphabet characters');
+   }
+   else if(phonenumber=='')
+   {
+       alert('Please enter your user phonenumber');
+   }
+   else if (!filter.test(phonenumber))
+  
+
+   else
+   {                                           
+          alert('Thank You for Registration & You are Redirecting to Website');
+         
+          page.location = "feb11.html"; 
+   }
 }
- 
-  </script>
- 
+</script>
+
+
+
+
+
 </head>
 <body>
 
 <h1>Penstion Plan</h1>
 <br>
 <p>Pension plans are plans maintained by employers that help individuals secure their financial future and protect them from any uncertainties that may arise post retirement. These plans are best suited for senior citizens that are looking to effectively plan their retirement.</p><br>
-<img src="https://track2traininginstitute.files.wordpress.com/2020/06/screenshot_2020-06-16-10-58-402.png" width="800" height="400">
-
+<img src="https://track2traininginstitute.files.wordpress.com/2020/06/screenshot_2020-06-16-10-58-402.png" width="400" height="400">
 <br>
+
+
+
+<div id="main">
+  <div class="h-tag">
+  <h2>Enter details to view Plan</h2>
+  </div>
+
+  <div class="login">
+  <table cellspacing="2" align="leftt" cellpadding="8" border="0">
+  <tr>
+  <td align="leftt"> Your Name :</td>
+  <td><input type="text" placeholder="Enter your name" id="t1" class="tb" required pattern="" /></td>
+  </tr>
+  <tr>
+  <td align="leftt">Phone Number :</td>
+  <td><input type="text" placeholder="Enter Phone Number" id="t2" class="tb" /></td><br>
+  </tr>
+
+  <td><br>
+ 
+  <input type="submit" value="View Plan" class="btn" onclick="registration()" /></td>
+  </tr>
+  </table>
+  </div>
+  
+  </div>
+
 <h1>Best Pension Options</h1><br>
 <p><h4><span style="border:5px solid rgb(9, 57, 82)">Get Tax Free Pension For Life</span>  <span style="border: 5px solid rgb(9, 65, 94)">Flexibility to withdraw fund value any time</span>  <span style="border: 5px solid rgb(9, 56, 80)">Guaranteed Tax Savings Under Sec 80 C & 10(10D)</span></h4></p><br>
 </div> 
 <hr>
-<div class="container">
-    
-<form action="/action_page.php">
-    <div class="form-group">
-      <label for="Name">Your Name:</label>
-      <input type="Name" class="form-control" id="Name" placeholder="Enter Name" >
-    </div>
-    <div class="form-group">
-      <label for="Num">Phone Number:</label>
-      <input type="Num" class="form-control" id="Num" placeholder="Enter Phone Number" >
-    </div>
-    
-    <button type="submit" class="btn btn-default">View Plans</button>
-  </form>
-</div>
-<br>
+
+  
 <h1>Types of Pension Plans in India</h1>
 <br>
 <p>To cater to the requirement of the insurance seekers, there is a wide range of Pension Plans available in the market. These plans have multiple classifications, based on the plan structure and benefits. These pension plans can be further divided into 8 categories.<ol>
@@ -85,96 +112,11 @@ function Check() {
 <h1>FAQs</h1>
 <p>Q:What is pension plan? <a href="insurence.html">Q1</a>
   <p>Q:What are the types of penstion plans? <a href="insurence.html">Q2</a>
-  
-</body>
-=======
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=>, initial-scale=1.0">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-
-  <script>
-        
-        function validate()
-        {  
-        var email=document.getElementById("email").value;
-        var pwd=document.getElementById("pwd").value;
-          
-        if (email==null || email=="")
-        
-        {  
-          alert("Email can't be blank");  
-          return false;  
-        }
-        
-        else if(pwd.length<6)
-        
-        {  
-          alert("Password must be at least 6 characters long.");  
-          return false;  
-          }  
-        } 
-
-function Check() {
-  return validate();      
-}
- 
-  </script>
- 
-</head>
-<body>
-
-<h1>Penstion Plan</h1>
-<br>
-<p>Pension plans are plans maintained by employers that help individuals secure their financial future and protect them from any uncertainties that may arise post retirement. These plans are best suited for senior citizens that are looking to effectively plan their retirement.</p><br>
-<img src="https://track2traininginstitute.files.wordpress.com/2020/06/screenshot_2020-06-16-10-58-402.png" width="800" height="400">
-
-<br>
-<h1>Best Pension Options</h1><br>
-<p><h4><span style="border:5px solid rgb(9, 57, 82)">Get Tax Free Pension For Life</span>  <span style="border: 5px solid rgb(9, 65, 94)">Flexibility to withdraw fund value any time</span>  <span style="border: 5px solid rgb(9, 56, 80)">Guaranteed Tax Savings Under Sec 80 C & 10(10D)</span></h4></p><br>
-</div> 
-<hr>
-<div class="container">
     
-<form action="/action_page.php">
-    <div class="form-group">
-      <label for="Name">Your Name:</label>
-      <input type="Name" class="form-control" id="Name" placeholder="Enter Name" >
-    </div>
-    <div class="form-group">
-      <label for="Num">Phone Number:</label>
-      <input type="Num" class="form-control" id="Num" placeholder="Enter Phone Number" >
-    </div>
-    
-    <button type="submit" class="btn btn-default">View Plans</button>
-  </form>
-</div>
-<br>
-<h1>Types of Pension Plans in India</h1>
-<br>
-<p>To cater to the requirement of the insurance seekers, there is a wide range of Pension Plans available in the market. These plans have multiple classifications, based on the plan structure and benefits. These pension plans can be further divided into 8 categories.<ol>
- <ol> <p>
-   <li>Deferred Annuity</li>
-  <li>Immediate Annuity</li>
-<li>Annuity Certain</li>
-<li>With Cover and Without Cover Pension Plans</li>
-<li>Guaranteed Period Annuity</li>
- <li>Life Annuity</li>
-<li>National Pension Scheme(NPS)</li>
-<li>Pension Funds</li>
-<li>Whole Life ULIPs</li>
-<li>Defined Benefit</li>
-<li>Defined Contribution</li>
-</ol></p>
-<h1>FAQs</h1>
-<p>Q:What is pension plan? <a href="insurence.html">Q1</a>
-  <p>Q:What are the types of penstion plans? <a href="insurence.html">Q2</a>
-  
+
+
+
+
+
 </body>
->>>>>>> 2977def5a512fab06ee0afdc870e5ce24a0ede41
 </html>

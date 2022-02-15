@@ -1,0 +1,84 @@
+
+<!DOCTYPE html>
+<html>
+<body>
+
+
+
+    <p id="demo"></p>
+
+<p id="demo1"></p>
+
+<p id="demo2"></p>
+
+<p id="demo3"></p>
+
+<p id="demo4"></p>
+
+<script>
+
+let p, q, r;  
+p = 100;        
+q = 11;        
+r = p + q;    
+const PI = 3.14;
+
+var PlaceName = "Valley of flowers";
+
+let  z = 111;  
+
+
+
+{  
+  
+  let x= 2;
+  let y= 2022;  //local scope
+  document.write("Hello"+y+"<br>");
+  
+}
+
+{
+   let y=3;
+}
+
+document.getElementById("demo").innerHTML =
+"The value of z is " + z + ".";  //variable
+
+document.getElementById("demo1").innerHTML = 20.50; //literal
+
+document.getElementById("demo2").innerHTML = (10 + 10) * 10; //operators
+
+
+document.getElementById("demo3").innerHTML = placeName;
+
+document.getElementById("demo4").innerHTML = "Global Scope"+a;
+
+document.write(PI);
+document.write(b);
+
+
+</script>
+
+<p id="demo"></p>
+
+<script>
+document.getElementById("demo").innerHTML = 100 + 11;
+</script>
+
+<script>
+document.write("Welcome");
+</script>
+
+<script>
+window.alert("Hello!!!");
+</script>
+
+
+<script>
+console.log(100 + 11);
+</script>
+
+<button onclick="window.print()">click me</button>
+
+</body>
+</html>

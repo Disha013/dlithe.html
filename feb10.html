@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+    
+    <body align="center" bgcolor="sky blue" ></body>
+  <body>
+    
+        
+
+        <h2>Initialising the properties</h2>
+        <script>    
+            function Employee()
+           {
+            this.fname = 'xyz';
+		this.lname = 'tumkur';
+        this.designation = 'Trainee';
+        this.mobile_no = 9999999999;
+            }
+        
+            var studObj1 = new Employee();
+            studObj1.age = 15;
+            document.write(studObj1.fname+"<br>");
+            document.write(studObj1.lname+"<br>");
+            document.write(studObj1.designation+"<br>");
+            document.write(studObj1.mobile_no+"<br>");
+        
+            var studObj2 = new Employee();
+            document.write(studObj2.age); 
+            </script>	
+
+    
+
+
+<h3>display using inner html</h3>
+<p id="demo"></p>
+
+<script>
+function Emp1(fname, lname,designation1, salary1) 
+{
+  this.firstName = fname;
+  this.lastName = lname;
+  this.designation = designation1;
+  this.salary = salary1;
+}
+
+Emp1.prototype.name = function()
+ {
+  return this.firstName + " " + this.lastName;
+};
+
+const n = new Emp1("xy", "z", "Trainee", 10000);
+document.getElementById("demo").innerHTML ="My name is " + n.name()+"  my designation is"+n.designation+" ";
+
+</script>
+  
+
+
+<h3>Iheritance</h3>
+
+
+<script>
+   
+    class cycle
+{
+constructor()
+{
+this.company="Hero";
+}
+}
+class Vehicle extends cycle
+{
+constructor(name,price)
+{
+
+super();
+this.name=name;
+this.price=price;
+} 
+}
+var v = new Vehicle("Miss india gold","6000");
+document.writeln(v.company+" "+v.name+" "+v.price);
+    </script><br>
+  
+
+
+
+    <script>
+        class Moment extends Date 
+        {
+          constructor() 
+          {
+            super();
+          }
+        }
+        var m=new Moment();
+        document.writeln("Current date:");
+       
+        document.writeln(m.getDate()+"-"+(m.getMonth()+1)+"-"+m.getFullYear());
+        </script><br>
+
+      
+<h3>polymorphism</h3>
+
+
+    <script>  
+                  class A  
+                    {  
+                       display()  
+                      {  
+                        document.writeln("A is pink<br>");  
+                      }  
+                    } 
+                    
+                    
+                  class B extends A  
+                    {  
+                      display()  
+                      {  
+                        document.writeln("B is blue"+"<br>");  
+                      }  
+                    }  
+                    
+                  var a=[new A(), new B()]  
+                  a.forEach(function(msg)  
+                  {  
+                  msg.display();  
+                  });  
+                  </script>
+
+
+
+
+
+
+
+
+    
+</body>
+</html>
