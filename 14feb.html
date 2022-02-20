@@ -236,7 +236,7 @@ $(document).ready(function(){
 <script src = "https://code.jquery.com/jquery-1.10.2.js"></script>
 <script src = "https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
 
-<!-- Javascript -->
+
 <script>
    $(function() {
       var autocomp  =  [
@@ -262,10 +262,21 @@ $(document).ready(function(){
 
 
 
-
-
-
-
+<style>
+    #myProgress {
+      width: 100%;
+      background-color: #ddd;
+    }
+    
+    #myBar {
+      width: 10%;
+      height: 30px;
+      background-color: #04AA6D;
+      text-align: center;
+      line-height: 30px;
+      color: white;
+    }
+    </style>
 
 
 
@@ -430,11 +441,11 @@ $(document).ready(function(){
 <div  id="div1" style="height:100px;width:300px;border:1px solid black;background-color:rgb(152, 193, 212);">
 
     
-    <p16>HELLO.</p16>
+    <p16>HELLO</p16>
     
     
     </div>
-    <br>
+   
     
     <button>Empty the div element</button><br>
 <hr>    
@@ -454,21 +465,21 @@ $(document).ready(function(){
 
 <h2> JQ Methods </h2>
 / click /<br>
-<p20> I will disappear </p20><br><hr>
+<br><p20> I will disappear </p20><br><hr>
 
 
 / dbl click /<br>
 
-<p21> double-click , I will disappear.</p21><br><hr>
+<br><p21> double-click , I will disappear.</p21><br><hr>
 
 
 / Mouse enter /<br>
 
-<p22 id="p22">Enter this paragraph.</p22><br><hr>
+<br><p22 id="p22">Enter this paragraph.</p22><br><hr>
 
 
 / mouse leave /<br>
-<p23 id="p23">This is a paragraph.</p23><hr>
+<br><p23 id="p23">This is a paragraph.</p23><hr>
 
 
 <h2>Accordion</h2>
@@ -512,7 +523,7 @@ for (i = 0; i < acc.length; i++) {
 
 <h2>Autocomplete</h2>
        
-      <!-- HTML --> 
+    
       <div class = "ui-widget">
          <p><em>Enter word, letter or number </em></p>
          <label for = "automplete-1">Tags: </label>
@@ -526,6 +537,37 @@ for (i = 0; i < acc.length; i++) {
 
 
 
+
+      <h1>JavaScript Progress Bar</h1>
+
+      <div id="myProgress">
+        <div id="myBar">10%</div>
+      </div>
+      
+      <br>
+      <button onclick="move()">Click Me</button> 
+      
+      <script>
+      var i = 0;
+      function move() {
+        if (i == 0) {
+          i = 1;
+          var elem = document.getElementById("myBar");
+          var width = 10;
+          var id = setInterval(frame, 10);
+          function frame() {
+            if (width >= 100) {
+              clearInterval(id);
+              i = 0;
+            } else {
+              width++;
+              elem.style.width = width + "%";
+              elem.innerHTML = width  + "%";
+            }
+          }
+        }
+      }
+      </script
 
 
 
