@@ -1,0 +1,314 @@
+<!doctype html>
+<html lang = "en">
+   <head>
+      <meta charset = "utf-8">
+      <title>jQuery UI Buttons functionality</title>
+      <link href = "https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css"
+         rel = "stylesheet">
+      <script src = "https://code.jquery.com/jquery-1.10.2.js"></script>
+      <script src = "https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+      <body align="center" bgcolor="lavender"></body>
+      <script>
+         $(function() {
+            $( "#button-1, #button-2, #button-3, #button-4" ).button();
+            $( "#button-5" ).buttonset();
+         });
+      </script>
+
+<script>
+   
+    $(function() {
+       $( "#button-6" ).button({
+          icons: {
+             primary: "ui-icon-locked"
+          },
+          text: false
+       });
+       $( "#button-7" ).button({
+          disabled:true
+       });
+       $( "#button-8" ).button({
+          icons: {
+             primary: "ui-icon-gear",
+             secondary: "ui-icon-triangle-1-s"
+          }
+       });
+    });
+ </script>
+
+
+
+
+<meta charset = "utf-8">
+<title>jQuery UI Datepicker functionality</title>
+<link href = "https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css"
+   rel = "stylesheet">
+<script src = "https://code.jquery.com/jquery-1.10.2.js"></script>
+<script src = "https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+
+
+<script>
+   $(function() {
+      $( "#datepicker-1" ).datepicker();
+   });
+  
+   $(function() {
+      $( "#datepicker-2" ).datepicker();
+   });
+
+   $(function() {
+      $( "#datepicker-3" ).datepicker({
+         appendText:"(yy-mm-dd)",
+         dateFormat:"yy-mm-dd",
+         altField: "#datepicker-4",
+         altFormat: "DD, d MM, yy"
+      });
+   });
+
+   $(function() {
+      $( "#datepicker-5" ).datepicker({
+         beforeShowDay : function (date) {
+            var dayOfWeek = date.getDay ();
+            // 0 : Sunday, 1 : Monday, ...
+            if (dayOfWeek == 0 || dayOfWeek == 6) return [false];
+            else return [true];
+         }
+      });
+   });
+</script>
+
+<script>
+$(function() {
+ $( "#datepicker-6" ).datepicker({
+    showOn:"button",
+    buttonImage: "download.jpg",
+    buttonImageOnly: true
+ });
+});
+</script>
+
+<script>
+$(function() {
+$( "#datepicker-7" ).datepicker({
+   defaultDate:+9,
+   dayNamesMin: [ "So", "Mo", "Di", "Mi", "Do", "Fr", "Sa" ],
+   duration: "slow"
+});
+});
+</script>
+
+<script>
+$(function() {
+$( "#datepicker-8" ).datepicker({
+   changeMonth:true,
+   changeYear:true,
+   numberOfMonths:[3,3]
+});
+});
+</script>
+
+
+
+
+
+<meta charset = "utf-8">
+      <title>jQuery UI Dialog functionality</title>
+      <link href = "https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css"
+         rel = "stylesheet">
+      <script src = "https://code.jquery.com/jquery-1.10.2.js"></script>
+      <script src = "https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+      
+  
+      <style>
+         .ui-widget-header,.ui-state-default, ui-button {
+            background:lightseagreen;
+            border: 1px solid:lightseagreen;
+            color: #FFFFFF;
+            font-weight: bold;
+         }
+      </style>
+      
+      
+      <script>
+         $(function() {
+            $( "#dialog" ).dialog({
+               autoOpen: false,  
+            });
+            $( "#opener" ).click(function() {
+               $( "#dialog" ).dialog( "open" );
+            });
+         });
+      </script>
+
+<script>
+    $(function() {
+       $( "#dialog1" ).dialog({
+          autoOpen: false, 
+          hide: "blind",
+          show : "slide",
+          height: 200      
+       });
+       $( "#opener1" ).click(function() {
+          $( "#dialog1" ).dialog( "open" );
+       });
+    });
+ </script>
+
+
+
+
+
+<style>
+    #myProgress {
+      width: 100%;
+      background-color: #ddd;
+    }
+    
+    #myBar {
+      width: 1%;
+      height: 30px;
+      background-color: #04AA6D;
+    }
+    </style>
+
+
+
+
+
+
+
+
+
+   </head>
+   
+   <body>
+      <h2>JQuery button UI</H2>
+     
+      <button id = "button-1">A button element</button>
+      <br>
+      <input id = "button-2" type = "submit" value = "A submit button">
+      <br>
+      <a id = "button-3" href = "">An anchor</a>
+      <br>
+      <input type = "checkbox"  id = "button-4" >
+      
+      <label for = "button-4">Toggle</label>
+     
+      <div id = "button-5">
+         <input type = "checkbox" id = "check1">
+         <label for = "check1">Left</label>
+         <br>
+         <input type = "checkbox" id = "check2">
+         <label for = "check2">Middle</label>
+         <br>
+         <input type = "checkbox" id = "check3">
+         <label for = "check3">Right</label>
+      </div>
+      <button id = "button-6">
+        Button with icon only
+     </button>
+     <br>
+     <button id = "button-7">
+        Button Disabled
+     </button>
+     <br>
+     <button id = "button-8">
+        Button with two icons
+     </button><br>
+     <hr>
+
+
+
+
+
+     <h2>Datepicker</h2>
+    
+      <p>Enter Date: <input type = "text" id = "datepicker-1"></p>
+      
+      <p>Enter Date: <div id = "datepicker-2"></p></div>
+      <br>
+      
+      <p>2
+      <p>Enter Date: <input type = "text" id = "datepicker-3"></p><br>
+
+      <p>Alternate Date: <input type = "text" id = "datepicker-4"></p>
+      <br>
+
+      <p>3.sunday and saturday are disabled.</p>
+      <p>Enter Date: <input type = "text" id = "datepicker-5"></p>
+      <br>
+      
+      <p>4</p>
+      <p>Enter Date: <input type = "text" id = "datepicker-7"></p>
+      <br>
+      <p>5</p>
+      <p>Enter Date: <input type = "text" id = "datepicker-8"></p><br><hr>
+
+
+
+
+
+
+      <body>
+        <h2>Dialog UI</h2>
+    
+       <div id = "dialog" 
+          title = "Bootstrap">Welcome!</div>
+       <button id = "opener">Open Dialog</button>
+       <br>
+       <br>
+       <div id = "dialog1"
+          title = "Hello...">Fun day!</div>
+       <button id = "opener1">Open Dialog1</button>
+ 
+
+
+
+
+
+
+       <h1>JavaScript Progress Bar</h1>
+
+       <div id="myProgress">
+         <div id="myBar"></div>
+       </div>
+       
+       <br>
+       <button onclick="move()">Click Me</button> 
+       
+       <script>
+       var i = 0;
+       function move() {
+         if (i == 0) {
+           i = 1;
+           var elem = document.getElementById("myBar");
+           var width = 1;
+           var id = setInterval(frame, 10);
+           function frame() {
+             if (width >= 100) {
+               clearInterval(id);
+               i = 0;
+             } else {
+               width++;
+               elem.style.width = width + "%";
+             }
+           }
+         }
+       }
+       </script>
+       
+
+
+
+
+
+ 
+
+
+
+
+       
+
+
+   </body>
+</html>

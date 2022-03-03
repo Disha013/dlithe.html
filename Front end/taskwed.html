@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+
+body{
+  color: blue;
+}
+
+h1 {
+  color: green;
+}
+h2 {
+  color: rgb(177, 55, 55);
+}
+
+            /*style to set body of page */
+            body{
+                width:100%;
+                margin:auto;
+            }
+            .gallery {
+                width:100%;
+                display:flex;
+                flex-flow: row wrap;
+
+            }
+            .box
+            {
+            flex-basis:20%;
+            width:100%;
+            padding:10px;
+            margin:8px;
+            box-shadow: 1px 1px 1px 1px chocolate;
+
+            }
+            .text{
+                text-align: center;
+                margin-top: 5px;
+            
+            }
+            .image:hover{
+                border:5px;
+                border-style:groove;
+                border-color: darkgoldenrod;
+
+            }
+
+            @media only screen and (max-width:300px)
+        {
+            .box{
+
+            }
+            
+        }
+        @media only screen and (max-width:500px)
+        {.box
+            {
+            flex-basis:40%;
+        }
+        
+    }
+
+        </style>
+    </head>
+
+
+
+
+/* opacity */
+
+</html> 
+<head>
+<style>
+div {
+  background-color: #4CAF50;
+  padding: 10px;
+}
+
+div.first {
+  opacity: 0.1;
+}
+
+div.second {
+  opacity: 0.3;
+}
+
+div.third {
+  opacity: 0.6;
+}
+</style>
+</head>
+<body>
+
+<h2>The opacity </h2>
+
+
+
+<div class="first"><p>opacity 0.1</p></div>
+<div class="second"><p>opacity 0.3</p></div>
+<div class="third"><p>opacity 0.6</p></div>
+<div><p>opacity 1 (default)</p></div>
+
+</body>
+</html><br>
+
+
+<br>/*  pseudo-element */
+
+<html>
+<head>
+<style>
+p::first-letter {
+  color: #2a8f37;
+  font-size: xx-large;
+  
+}
+</style>
+</head>
+<body>
+<p>Paradise on Earth ::Jammu and Kashmir is world famous for its scenic splendour, snow-capped mountains, plentiful wildlife, exquisite monuments, hospitable people and local handicrafts.</p>
+</body>
+</html>
+ 
+
+
+<html>
+<head>
+<style>
+h1::after {
+  content: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRA1WJNMMMpVeO-aEZ0UK9da9jb0AyJ8Z0wlA&usqp=CAU);
+}
+</style>
+</head>
+<body>
+<h1>pseudo-element</h1>
+</body>
+</html><br>
+
+
+
+
+
+
+
+
+
+

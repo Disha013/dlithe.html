@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <center>
+<h2 style="color:green">JavaScript String Methods</h2>
+
+
+<button onclick="myFunction()">Tap it</button>
+
+<p id="demo">corona</p>
+
+<script>
+function myFunction() {
+  let text = document.getElementById("demo").innerHTML;
+  document.getElementById("demo").innerHTML =
+  text.replace(/corona/i, "omicron");
+}
+
+
+</script>
+
+
+<script>
+    function verifyPassword() {
+      var pw = document.getElementById("pswd").value;
+      
+      if(pw == "") {
+         document.getElementById("message").innerHTML = "**Enter the password please!";
+         return false;
+      }
+     
+     
+      if(pw.length < 8) {
+         document.getElementById("message").innerHTML = "**Password length must be atleast 8 characters";
+         return false;
+      }
+    
+   
+      if(pw.length > 15) {
+         document.getElementById("message").innerHTML = "**Password length must not exceed 15 characters";
+         return false;
+      } else {
+         alert("Password is correct");
+      }
+    }
+    </script>
+    
+    <body>
+    <center>
+    <h1 style="color:green">Verify valid password </h1>
+        
+    
+    <form onsubmit ="return verifyPassword()">
+
+    <td> Enter Password </td>
+    <input type = "password" id = "pswd" value = ""> 
+    <span id = "message" style="color:red"> </span> <br><br>
+    
+  
+    <input type = "submit" value = "Submit">
+    
+  
+    <button type = "reset" value = "Reset" >Reset</button>
+    </form>
+    </center>
+    
+
+
+
+    <script>  
+        function matchPassword() {  
+          var pw1 = document.getElementById("pswd1");  
+          var pw2 = document.getElementById("pswd2");  
+          if(pw1 != pw2)  
+          {   
+            alert("Passwords did not match");  
+          } else {  
+            alert("Password created successfully");  
+          }  
+        }  
+        </script>
+
+
+  
+<body>  
+<center>  
+<form>  
+<h1 style="color:green">Confirm Password Validation</h1>  
+ 
+  
+<td> Enter Password </td>  
+<input type = "password" name = "pswd1"> <br><br>  
+    
+<td> Confirm Password </td>  
+<input type = "password" name = "pswd2"> <br><br>  
+  
+<!?Click to validate confirm password -->  
+<button type = "submit" onclick="matchPassword()">Submit</button>  
+
+<button type = "reset" value = "Reset" >Reset</button>  
+</form>  
+</center>  
+
+
+
+
+
+
+
+
+
+</body>
+</html>
